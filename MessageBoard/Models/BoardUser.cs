@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace MessageBoard.Models
 {
-    public class BoardUser
+    public class BoardUser : IdentityUser
     {
         [Key]
         public int Id { get; set; }
