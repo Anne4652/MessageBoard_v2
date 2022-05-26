@@ -30,5 +30,10 @@ namespace MessageBoard.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public async Task AddNewMessage(Message message)
+        {
+            await _messageService.AddNewMessage(message);
+        }
     }
 }

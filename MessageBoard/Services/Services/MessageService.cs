@@ -1,6 +1,6 @@
 ﻿using MessageBoard.Services.Interfaces;
 using MessageBoard.Data.Interfaces;
-
+using MessageBoard.Models;
 
 namespace MessageBoard.Services.Services
 {
@@ -13,6 +13,12 @@ namespace MessageBoard.Services.Services
         {
             _logger = logger;
             _messageRepository = messageRepository;
+        }
+
+        public async Task AddNewMessage(Message message)
+        {
+            await _messageRepository.CreateAsync(message);
+            await _messageRepository.SaveAsync();
         }
     }
 }
