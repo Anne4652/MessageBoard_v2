@@ -1,16 +1,18 @@
 ﻿using MessageBoard.Models;
+using MessageBoard.Data.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using MessageBoard.Services.Interfaces;
 
 namespace MessageBoard.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IMessageService _messageService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IMessageService messageService)
         {
-            _logger = logger;
+            _messageService = messageService;
         }
 
         public IActionResult Index()
