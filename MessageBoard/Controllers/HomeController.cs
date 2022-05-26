@@ -3,6 +3,7 @@ using MessageBoard.Data.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using MessageBoard.Services.Interfaces;
+using MessageBoard.Services.Services;
 
 namespace MessageBoard.Controllers
 {
@@ -10,9 +11,9 @@ namespace MessageBoard.Controllers
     {
         private readonly IMessageService _messageService;
 
-        public HomeController(IMessageService messageService)
+        public HomeController()
         {
-            _messageService = messageService;
+            _messageService = new MessageService();
         }
 
         public IActionResult Index()

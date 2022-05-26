@@ -1,6 +1,8 @@
 ﻿using MessageBoard.Services.Interfaces;
 using MessageBoard.Data.Interfaces;
+using MessageBoard.Data.Repositories;
 using MessageBoard.Models;
+using MessageBoard.Data;
 
 namespace MessageBoard.Services.Services
 {
@@ -9,10 +11,10 @@ namespace MessageBoard.Services.Services
         private readonly ILogger<MessageService> _logger;
         private readonly IMessageRepository _messageRepository;
 
-        public MessageService(ILogger<MessageService> logger, IMessageRepository messageRepository)
+        public MessageService()
         {
-            _logger = logger;
-            _messageRepository = messageRepository;
+          
+            _messageRepository = new MessageRepository(new BoardDbContext());
         }
 
         public async Task AddNewMessage(Message message)
