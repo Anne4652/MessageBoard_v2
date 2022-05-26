@@ -35,5 +35,11 @@ namespace MessageBoard.Controllers
         {
             await _messageService.AddNewMessage(message);
         }
+
+        public async Task RemoveMessage(Message message)
+        {
+            await _messageService.RemoveMessage(message);
+
+        }
     }
 }

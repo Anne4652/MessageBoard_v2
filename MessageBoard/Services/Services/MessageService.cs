@@ -20,5 +20,12 @@ namespace MessageBoard.Services.Services
             await _messageRepository.CreateAsync(message);
             await _messageRepository.SaveAsync();
         }
+
+        public async Task RemoveMessage(Message message)
+        {
+            _messageRepository.Delete(message);
+            await _messageRepository.SaveAsync();
+
+        }
     }
 }
