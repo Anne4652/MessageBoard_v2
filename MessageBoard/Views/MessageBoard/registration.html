@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>LOGIN</title>
+  <title>ADT. | Ввійти</title>
 </head>
 <body>
   <div class="navbar">
@@ -41,19 +41,27 @@
       </div> 
     </div>
 
-  <p style="font-size: 30px; text-align:center; margin-top: 10px;">Ввійти</p>  
+  <p style="font-size: 30px; text-align:center; margin-top: 10px;">Реєстрація</p>  
  
-  <form action="mainpage.html" class="container">
-    <label for="uname"><b>Ім'я користувача</b></label>
-    <input type="text" placeholder="Введіть ім'я" name="uname" required >
+    <form action="mainpage.html" class="container">
+      <label for="uname"><b>Ім'я користувача</b></label>
+      <input type="text" placeholder="Введіть ім'я" name="uname" required >
 
-    <label for="psw"><b>Пароль</b></label>
-    <input type="password" placeholder="Введіть пароль" name="psw" required>
+      <label for="email"><b>Електронна скринька</b></label>
+      <input type="email" placeholder="Введіть електронну скриньку" name="email" required>
+
+      <label for="number"><b>Номер телефону</b></label>
+      <input type="tel" placeholder="Введіть номер телефону" value="+38 " name="number" required>
+
+      <label for="psw"><b>Пароль</b></label>
+      <input type="password" placeholder="Введіть пароль" name="psw" required >
+
+      <label for="psw"><b>Підтвердити пароль</b></label>
+      <input type="password" placeholder="Підтвердіть пароль" name="psw" required>
+        
+      <button type="submit" >Зареєструватися</button>
       
-    <button type="submit" >Ввійти</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Запам'ятати пароль
-    </label>
-</form>
+  </form>
+  
 </body>
 </html>

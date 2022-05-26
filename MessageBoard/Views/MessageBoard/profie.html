@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<title>ADT.</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+          ADT.
+        </div>
+      
+        <div class="dropdown">
+          <button class="dropbtn"> Вхід 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="login.html">Вхід</a>
+            <a href="registration.html">Реєстрація</a>
+          </div>
+        </div> 
+      
+        <a href="profile.html">Мій профіль</a>
+        <a href="advertisement.html">Додати оголошення</a>
+        
+        <div class="dropdown">
+          <button class="dropbtn"> Категорії 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Одяг</a>
+            <a href="#">Ліки</a>
+            <a href="#">Житло</a>
+            <a href="#">Їжа</a>
+            <a href="#">Послуги</a>
+          </div>
+        </div> 
+      </div>
+
+      <p style="font-size: 30px; text-align:center; margin-top: 10px;">Мій профіль</p>
+      <div class="user">
+        <div class="username"> darynadulyba
+            <div class="phonenubmer"> +380963877955
+                <div class="email">darynadulyba@gmil.com
+                    <button class="accordion">Мої оголошення</button>
+                    <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, s
+                        ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+</body>
+</html>
