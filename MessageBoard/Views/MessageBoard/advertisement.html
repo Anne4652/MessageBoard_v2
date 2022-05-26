@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ADT. | Додати оголошення</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+          ADT.
+        </div>
+      
+        <div class="dropdown">
+          <button class="dropbtn"> Вхід 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="login.html">Реєстрація</a>
+          </div>
+        </div> 
+      
+        <a href="#news">Мій профіль</a>
+        <a href="#home">Додати оголошення</a>
+        
+        <div class="dropdown">
+          <button class="dropbtn"> Категорії 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Одяг</a>
+            <a href="#">Ліки</a>
+            <a href="#">Житло</a>
+            <a href="#">Їжа</a>
+            <a href="#">Послуги</a>
+          </div>
+        </div> 
+      </div>
+
+       <p style="font-size: 30px; text-align:center; margin-top: 10px;">Додати оголошення </p>
+       <form  class="add-adv">
+        <p><input type="file" name="photo"></p><br>
+
+        <label for="category">Виберіть категорію:</label>
+        <select name="category" id="category" aria-placeholder="Виберіть" required>
+          <option value="clothes">Одяг</option>
+          <option value="medicine">Ліки</option>
+          <option value="house">Житло</option>
+          <option value="food">Їжа</option>
+          <option value="services">Послуги</option>
+        </select><br><br>
+        
+        <p>Заголовок</p>
+        <input class="text-main" type="text" placeholder="Введіть заголовок" required> 
+       
+        <p>Опис</p>
+        <input class="text-descr" type="text" placeholder="Введіть опис" maxlength="200" required> 
+
+        <br><br>
+        <button onclick="myFunction()" class="submit" type="submit">Додати</button>
+      </form>
+
+
+        <script>
+            function myFunction() {
+                alert("Оголошення додано!");
+            }
+        </script>
+        
+</body>
+</html>

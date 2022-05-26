@@ -101,6 +101,7 @@
   margin: auto;
   margin-top: 100px;
   border: rgb(34, 34, 34) solid 1px;
+  background-color: rgb(247, 247, 247);
 }
 
 input[type=text], input[type=password] {
@@ -127,4 +128,29 @@ button:hover {
   opacity: 0.8;
 }
 
-
+.add-adv {
+    padding: 16px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    border: rgb(34, 34, 34) solid 1px;
+    background-color: rgb(247, 247, 247);
+  }
+  
+  .add-adv p {
+    text-align: center;
+  }
+  
+  .submit {
+    background-color: #454df5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .submit:hover {
+    opacity: 0.8;
+  }
